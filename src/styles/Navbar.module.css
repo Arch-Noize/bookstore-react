@@ -1,0 +1,25 @@
+.navItem {
+  list-style: none;
+  padding: 1em;
+  transition: all 0.5s ease;
+}
+
+.navItem:hover {
+  background-color: #bdbdbd93;
+  font-size: 1.3em;
+  font-weight: 500;
+  padding: 0.7em;
+}
+
+.navbar {
+  margin: 0 1em 0 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  justify-content: end;
+  gap: 0.5em;
+}
