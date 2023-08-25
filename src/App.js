@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Frontpage from './components/pages/Frontpage';
-import Categories from './components/pages/Categories';
+import Frontpage from './pages/Frontpage';
+import Categories from './pages/Categories';
 import BookNav from './components/BookNav';
 
 function App() {

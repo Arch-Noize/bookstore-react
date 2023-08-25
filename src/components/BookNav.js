@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styles from './styles/Navbar.module.css';
+import styles from '../styles/Navbar.module.css';
 
 const BookNav = () => (
   <nav className={styles.navbar}>

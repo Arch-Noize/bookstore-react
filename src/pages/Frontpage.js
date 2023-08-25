@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom';
-import BookList from '../BookList';
-import BookForm from '../BookForm';
+import BookList from '../components/BookList';
+import BookForm from '../components/BookForm';
 
 const Frontpage = () => (
   <>
