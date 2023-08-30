@@ -1,10 +1,10 @@
 .status {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  text-align: center;
 }
