@@ -34,7 +34,7 @@ const BookList = () => {
     <div>
       <ul>
         {books.map((book) => (
-          <Book key={book.id} props={book} title={book.title} author={book.author} id={book.id}/>
+          <Book key={book.id} props={book} title={book.title} author={book.author} id={book.id} />
         ))}
       </ul>
       <BookForm />
