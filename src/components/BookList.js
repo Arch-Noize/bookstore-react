@@ -1,5 +1,6 @@
 import React from 'react';
 import Book from './Book';
+import BookForm from './BookForm';
 
 const BookList = () => {
   const books = [
@@ -30,11 +31,14 @@ const BookList = () => {
   ];
 
   return (
-    <ul>
-      {books.map((book) => (
-        <Book key={book.id} props={book} title={book.title} author={book.author} />
-      ))}
-    </ul>
+    <div>
+      <ul>
+        {books.map((book) => (
+          <Book key={book.id} props={book} title={book.title} author={book.author} id={book.id} />
+        ))}
+      </ul>
+      <BookForm />
+    </div>
   );
 };
 
