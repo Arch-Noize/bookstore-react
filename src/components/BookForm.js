@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import styles from '../styles/BookForm.module.css';
+import styles from '../styles/Books.module.css';
 import { addBook } from '../redux/books/booksSlices';
 
 const BookForm = () => {
@@ -23,7 +23,16 @@ const BookForm = () => {
         onChange={(event) => setAuthor(event.target.value)}
         value={author}
       />
-      <button type="button" onClick={() => dispatch(addBook({ title, author, id: uuidv4() }))}>Add Book</button>
+      <button
+        type="button"
+        onClick={() => {
+          dispatch(addBook({ title, author, item_id: uuidv4() }));
+          setTitle('');
+          setAuthor('');
+        }}
+      >
+        Add Book
+      </button>
     </form>
   );
 };
