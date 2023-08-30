@@ -44,7 +44,7 @@ Website currently uses:
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
-This website shows a calculator with all of its basic functions!
+This website shows a list of books with basic information and functions!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,8 +74,8 @@ In order to run this project you need:
 Example commands:
 
 ```sh
-  git https://github.com/Arch-Noize/math-magicians.git
-  cd math-magicians
+  git https://github.com/Arch-Noize/bookstore-react.git
+  cd bookstore-react
 ```
 
 ### Install
