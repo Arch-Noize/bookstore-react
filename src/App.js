@@ -1,16 +1,16 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Frontpage from './pages/Frontpage';
-import Categories from './pages/Categories';
-import BookNav from './components/BookNav';
+import BookList from './components/BookList';
+import CategoriesPage from './pages/CategoriesPage';
 
 function App() {
   return (
     <>
-      <BookNav />
       <Routes>
         <Route path="/" element={<Frontpage />}>
-          <Route path="categories" element={<Categories />} />
+          <Route index element={<BookList />} />
+          <Route path="categories" element={<CategoriesPage />} />
         </Route>
       </Routes>
     </>

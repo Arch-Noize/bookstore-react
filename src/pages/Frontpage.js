@@ -1,11 +1,9 @@
 import { Outlet } from 'react-router-dom';
-import BookList from '../components/BookList';
-import BookForm from '../components/BookForm';
+import BookNav from '../components/BookNav';
 
 const Frontpage = () => (
   <>
-    <BookList />
-    <BookForm />
+    <BookNav />
     <Outlet />
   </>
 );
