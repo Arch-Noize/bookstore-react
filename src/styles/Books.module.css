@@ -10,9 +10,9 @@
   flex-direction: row;
   flex-wrap: nowrap;
   gap: 15px;
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
 
 .details li {
-  list-style-type: none !important ;
+  list-style-type: none !important;
 }
