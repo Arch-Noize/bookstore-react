@@ -1,10 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import Frontpage from './pages/Frontpage';
 import BookList from './components/BookList';
 import CategoriesPage from './pages/CategoriesPage';
+import { getBooks } from './redux/books/booksSlices';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getBooks());
+  });
+
   return (
     <>
       <Routes>

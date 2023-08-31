@@ -6,7 +6,7 @@ const initialState = {
   isLoading: true,
 };
 
-const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/7UcxFv8FAqQo5Ix5MjG4/books';
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/zfjKiymKKAMh6u4bLQpg/books';
 
 export const getBooks = createAsyncThunk('books/getBooks', async () => {
   const res = await axios.get(url);
@@ -17,11 +17,15 @@ export const postBook = async (book) => {
   await axios.post(url, book);
 };
 
+export const deleteBook = async (id) => {
+  await axios.delete(`${url}/${id}`);
+};
+
 const bookList = (bookItems) => {
   const res = [];
-  Object.keys(bookItems).forEach((itemId) => {
-    const book = bookItems[itemId][0];
-    book.item_id = itemId;
+  Object.keys(bookItems).forEach((id) => {
+    const book = bookItems[id][0];
+    book.item_id = id;
     res.push(book);
   });
   return res;
@@ -38,21 +42,21 @@ const booksSlice = createSlice({
     },
     removeBook: (state, action) => {
       const bookId = action.payload;
-      return { ...state, books: state.books.filter((item) => item.item_id !== bookId) };
+      state.books = state.books.filter((item) => item.item_id !== bookId);
+      deleteBook(bookId);
     },
   },
   extraReducers: {
-    // [getBooks.pending]: (state) => {
-    //   state.isLoading = true;
-    // },
-    [getBooks.fulfilled]: (state, action) => {
-      const book = action.payload;
-      console.log(book);
-      console.log(bookList(book));
+    [getBooks.pending]: (state) => {
+      state.isLoading = true;
     },
-    // [getBooks.rejected]: (state) => {
-    //   state.isLoading = false;
-    // },
+    [getBooks.fulfilled]: (state, action) => {
+      state.books = bookList(action.payload);
+      state.isLoading = false;
+    },
+    [getBooks.rejected]: (state) => {
+      state.isLoading = false;
+    },
   },
 });
 

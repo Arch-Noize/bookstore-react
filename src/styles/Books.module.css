@@ -4,3 +4,15 @@
   margin: 1em;
   padding: 1em;
 }
+
+.details {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 15px;
+  margin-bottom: 15px; 
+}
+
+.details li {
+  list-style-type: none !important ;
+}

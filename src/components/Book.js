@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlices';
+import styles from '../styles/Books.module.css';
 
 const Book = ({
   title, author, category, id,
@@ -11,7 +12,7 @@ const Book = ({
   return (
     <li key={id}>
       <h3>{title}</h3>
-      <ul>
+      <ul className={styles.details}>
         <li>{author}</li>
         <li>{category}</li>
       </ul>
