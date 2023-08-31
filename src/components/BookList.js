@@ -9,9 +9,12 @@ const BookList = () => {
 
   if (books.books.length === 0) {
     return (
-      <div className={styles.container}>
-        <h2>Currently, theres no Books!</h2>
-      </div>
+      <>
+        <div className={styles.container}>
+          <h2>Currently, theres no Books!</h2>
+        </div>
+        <BookForm />
+      </>
     );
   }
 
@@ -23,6 +26,7 @@ const BookList = () => {
             key={book.item_id}
             title={book.title}
             author={book.author}
+            category={book.category}
             id={book.item_id}
           />
         ))}
