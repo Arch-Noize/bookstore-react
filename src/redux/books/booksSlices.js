@@ -42,20 +42,23 @@ const booksSlice = createSlice({
     },
     removeBook: (state, action) => {
       const bookId = action.payload;
-      state.books = state.books.filter((item) => item.item_id !== bookId);
       deleteBook(bookId);
+      return { ...state, books: state.books.filter((item) => item.item_id !== bookId) };
     },
   },
   extraReducers: {
     [getBooks.pending]: (state) => {
-      state.isLoading = true;
+      const status = state;
+      status.isLoading = true;
     },
     [getBooks.fulfilled]: (state, action) => {
-      state.books = bookList(action.payload);
-      state.isLoading = false;
+      const status = state;
+      status.books = bookList(action.payload);
+      status.isLoading = false;
     },
     [getBooks.rejected]: (state) => {
-      state.isLoading = false;
+      const status = state;
+      status.isLoading = false;
     },
   },
 });
