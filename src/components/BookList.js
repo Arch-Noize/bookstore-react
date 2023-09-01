@@ -19,8 +19,8 @@ const BookList = () => {
   }
 
   return (
-    <div>
-      <ul>
+    <div className={styles.container}>
+      <ul className={styles.bookList}>
         {books.books.map((book) => (
           <Book
             key={book.item_id}
