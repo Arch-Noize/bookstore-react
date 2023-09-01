@@ -1,21 +1,33 @@
-.navItem {
-  list-style: none;
-  padding: 1em;
-  transition: all 0.5s ease;
-}
-
-.navItem:hover {
-  background-color: #bdbdbd93;
-  font-size: 1.3em;
-  font-weight: 500;
-  padding: 0.7em;
+h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0290ff;
+  margin-left: 3em;
 }
 
 .navbar {
-  margin: 0 1em 0 1em;
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  padding: 0.8rem;
   align-items: center;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  border-bottom: solid 1px #e8e8e8;
+  background-color: #fff;
+}
+
+.navItem {
+  padding: 1em;
+  font-size: 0.8em;
+  font-weight: 200;
+  transition: all 0.5s ease;
+  letter-spacing: 2px;
+}
+
+.navItem:hover {
+  background-color: #0291ffb0;
+  font-size: 1em;
+  font-weight: 400;
+  padding: 0.6em;
 }
 
 .list {

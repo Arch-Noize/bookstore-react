@@ -1,7 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import styles from '../styles/Books.module.css';
 import { addBook } from '../redux/books/booksSlices';
 
 const BookForm = () => {
@@ -29,7 +28,7 @@ const BookForm = () => {
   };
 
   return (
-    <form className={styles.container}>
+    <form>
       <input
         type="text"
         placeholder="Book Title"

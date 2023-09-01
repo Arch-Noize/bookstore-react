@@ -10,14 +10,20 @@ const Book = ({
   const dispatch = useDispatch();
 
   return (
-    <li key={id}>
-      <h3>{title}</h3>
-      <ul className={styles.details}>
-        <li>{author}</li>
-        <li>{category}</li>
-      </ul>
-      <button type="button" onClick={() => dispatch(removeBook(id))}>Delete</button>
-    </li>
+    <div className={styles.card}>
+      <li key={id}>
+        <div className={styles.details}>
+          <h3>{author}</h3>
+          <h2>{title}</h2>
+          <h4>{category}</h4>
+        </div>
+        <div className={styles.buttons}>
+          <button type="button"> Comments </button>
+          <button type="button" onClick={() => dispatch(removeBook(id))}>Remove</button>
+          <button type="button"> Edit </button>
+        </div>
+      </li>
+    </div>
   );
 };
 
