@@ -5,6 +5,11 @@ h1 {
   margin-left: 3em;
 }
 
+.navbar > img {
+  position: absolute;
+  left: 90%;
+}
+
 .navbar {
   display: flex;
   width: 100%;

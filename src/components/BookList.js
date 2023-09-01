@@ -20,7 +20,7 @@ const BookList = () => {
 
   return (
     <div className={styles.container}>
-      <ul>
+      <ul className={styles.bookList}>
         {books.books.map((book) => (
           <Book
             key={book.item_id}
@@ -31,13 +31,7 @@ const BookList = () => {
           />
         ))}
       </ul>
-      <div>
-        <h2>
-          ADD NEW BOOK
-        </h2>
-        <hr />
-        <BookForm />
-      </div>
+      <BookForm />
     </div>
   );
 };

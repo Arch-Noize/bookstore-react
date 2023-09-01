@@ -18,10 +18,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f5f6fa;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 li {
   list-style: none;
+}
+
+hr {
+  color: #cfcdcde6;
 }
 
 code {
