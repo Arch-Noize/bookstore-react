@@ -21,15 +21,15 @@ form::placeholder {
   color: #c4c4c4;
 }
 
-.title{
+.title {
   flex-grow: 1;
 }
 
-.writer{
+.writer {
   flex-grow: 1;
 }
 
-.category{
+.category {
   flex-grow: 1;
 }
 
